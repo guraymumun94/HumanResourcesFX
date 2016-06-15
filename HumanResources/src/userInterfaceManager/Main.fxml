@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<AnchorPane minHeight="500.0" minWidth="700.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="base.Main">
+	<children>
+
+
+		<Accordion maxHeight="500.0" maxWidth="700.0" minHeight="500.0" minWidth="700.0" prefHeight="500.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+			<panes>
+				<TitledPane animated="false" text="Извеждане на вакантните места в организацията">
+					<content>
+						<BorderPane>
+							<center>
+								<fx:include source="DisplayVacanciesUI.fxml" />
+							</center>
+						</BorderPane>
+					</content>
+				</TitledPane>
+				<TitledPane animated="false" text="Добавяне на вакантни места в организацията">
+					<content>
+						<AnchorPane>
+							<fx:include source="AddVacancyUI.fxml" />
+						</AnchorPane>
+					</content>
+				</TitledPane>
+			</panes>
+			<effect>
+				<DropShadow height="93.85" radius="32.0075" width="36.18" />
+			</effect>
+		</Accordion>
+	</children>
+</AnchorPane>

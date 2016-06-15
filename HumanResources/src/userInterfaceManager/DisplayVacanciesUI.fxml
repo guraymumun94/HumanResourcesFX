@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userInterfaceManager.DisplayVacanciesUI">
+   <center>
+      <ListView fx:id="vacanciesListView" onMouseClicked="#handleMouseClick" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Label prefHeight="16.0" prefWidth="118.0" text="Вид на позиция:">
+               <HBox.margin>
+                  <Insets left="20.0" right="-140.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <ComboBox fx:id="typeCombo" prefWidth="210.0" promptText="Всички">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" top="35.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Label text="Специализация:">
+               <HBox.margin>
+                  <Insets left="20.0" right="-134.0" top="15.0" />
+               </HBox.margin>
+            </Label>
+            <ComboBox fx:id="specializationCombo" prefWidth="210.0" promptText="Всички">
+               <HBox.margin>
+                  <Insets left="20.0" right="20.0" top="35.0" />
+               </HBox.margin>
+            </ComboBox>
+            <Button mnemonicParsing="false" onAction="#displayVacancies" text="Покажи" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets bottom="35.0" left="20.0" right="20.0" top="35.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+   </top>
+</BorderPane>
